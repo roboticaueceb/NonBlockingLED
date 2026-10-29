@@ -128,3 +128,8 @@ void NonBlockingLED::update() {
             break;
     }
 }
+
+bool NonBlockingLED::isBusy() const {
+    // Está ocupado si está ejecutando un pulso único o una serie de destellos finitos
+    return (_mode == MODE_PULSE || _mode == MODE_BLINK_COUNT);
+}
