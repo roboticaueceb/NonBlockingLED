@@ -31,6 +31,9 @@ public:
     // Consulta de estado lógico actual (true = encendido)
     bool getState() const;
 
+    // Consulta si hay una secuencia finita en curso (pulso o conteo de destellos)
+    bool isBusy() const;
+
 private:
     enum LEDMode {
         MODE_SOLID,
